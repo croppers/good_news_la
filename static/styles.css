@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    position: relative;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.scroll-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.top-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.random-button {
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.tile {
+    background-color: #007bff;
+    color: #fff;
+    padding: 40px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.tile a {
+    color: #fff;
+    text-decoration: none;
+}
