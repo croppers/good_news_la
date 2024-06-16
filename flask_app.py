@@ -3,15 +3,21 @@ import random
 
 app = Flask(__name__)
 
-neighborhoods = [
-    "Hollywood", "Downtown", "Beverly Hills", 
-    "Santa Monica", "Venice", "Westwood", 
-    "Silver Lake", "Echo Park", "Pasadena"
+neighborhood_clusters = [
+    "Brentwood, Palisades, Malibu",
+    "Westwood",
+    "Beverly Crest, Bel Air",
+    "Santa Monica, Venice",
+    "Playa Vista, Marina del Rey",
+    "Rancho Park, Cheviot Hills, Sawtelle",
+    "Beverly Hills, Century City",
+    "Pico Robertson, Beverlywood",
+    "Palms, Culver City, Ladera Heights"
 ]
 
 @app.route('/')
 def index():
-    return render_template('index.html', neighborhoods=neighborhoods)
+    return render_template('index.html', neighborhoods=neighborhood_clusters)
 
 @app.route('/submit')
 def submit():
@@ -19,12 +25,12 @@ def submit():
 
 @app.route('/random')
 def random_page():
-    random_neighborhood = random.choice(neighborhoods)
+    random_neighborhood = random.choice(neighborhood_clusters)
     return redirect(url_for('neighborhood', name=random_neighborhood))
 
 @app.route('/neighborhood/<name>')
 def neighborhood(name):
-    if name not in neighborhoods:
+    if name not in neighborhood_clusters:
         return "Neighborhood not found", 404
     return render_template('neighborhood.html', name=name)
 

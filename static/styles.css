@@ -28,18 +28,13 @@ header {
     right: 20px;
 }
 
-.scroll-button img {
-    width: 40px;
-    height: 40px;
-}
-
 .top-left {
     position: absolute;
     top: 20px;
     left: 20px;
 }
 
-.random-button {
+.submit-button, .random-button {
     font-size: 1em;
     padding: 10px 20px;
     border: none;
@@ -54,20 +49,49 @@ header {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .tile {
     background-color: #007bff;
     color: #fff;
-    padding: 40px 20px;
+    padding: 20px 10px;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2em;
+    text-align: center;
 }
 
 .tile a {
     color: #fff;
     text-decoration: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .grid {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .tile {
+        padding: 10px 5px;
+        font-size: 1em;
+    }
+
+    .title {
+        font-size: 1.5em;
+        padding: 5px 10px;
+    }
+
+    .top-right, .top-left {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .submit-button, .random-button {
+        padding: 5px 10px;
+    }
 }
